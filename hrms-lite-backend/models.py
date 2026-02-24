@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Date, Enum
+from sqlalchemy import Column, Integer, String, Date, Enum, ForeignKey
 from sqlalchemy.orm import relationship
 from datetime import datetime
 import enum
@@ -24,7 +24,7 @@ class Attendance(Base):
     __tablename__ = "attendance"
 
     id = Column(Integer, primary_key=True, index=True)
-    employee_id = Column(Integer, index=True)
+    employee_id = Column(Integer, ForeignKey("employees.id"), index=True)
     date = Column(Date)
     status = Column(Enum(AttendanceStatus), default=AttendanceStatus.PRESENT)
     created_at = Column(Date, default=datetime.utcnow)
