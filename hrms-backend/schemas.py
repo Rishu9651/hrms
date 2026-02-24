@@ -19,7 +19,7 @@ class AttendanceResponse(AttendanceBase):
     employee_id: int
 
     class Config:
-        from_attributes = True
+        orm_mode = True
 
 class EmployeeBase(BaseModel):
     employee_id: str = Field(..., min_length=1, max_length=50)
@@ -41,7 +41,7 @@ class EmployeeResponse(EmployeeBase):
     attendance_records: List[AttendanceResponse] = []
 
     class Config:
-        from_attributes = True
+        orm_mode = True
 
 class ErrorResponse(BaseModel):
     detail: str
