@@ -224,7 +224,7 @@ DEBUG=false
 ### Frontend Environment Variables
 ```env
 # API Endpoint
-VITE_API_URL=https://hrms-api.onrender.com/api
+VITE_API_URL=https://hrms-y7qt.onrender.com/api
 ```
 
 
