@@ -4,8 +4,8 @@ A lightweight, full-stack web application for managing employee records and dail
 
 ## Live Demo
 
-- Frontend: https://hrms.vercel.app
-- API Docs: https://hrms-api.onrender.com/docs
+- Frontend: https://hrmstech.netlify.app/
+- API Docs: https://hrms-y7qt.onrender.com/docs
 
 ## Overview
 
