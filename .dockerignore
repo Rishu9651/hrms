@@ -1,0 +1,13 @@
+venv
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.env
+.env.*
+.git
+node_modules
+hrms-frontend/node_modules
+dist
+build
+*.log
