@@ -1,12 +1,12 @@
 # Backend
-hrms-lite-backend/venv/
-hrms-lite-backend/__pycache__/
-hrms-lite-backend/*.db
-hrms-lite-backend/*.sqlite3
+hrms-backend/venv/
+hrms-backend/__pycache__/
+hrms-backend/*.db
+hrms-backend/*.sqlite3
 
 # Frontend
-hrms-lite-frontend/node_modules/
-hrms-lite-frontend/dist/
+hrms-frontend/node_modules/
+hrms-frontend/dist/
 
 # IDE
 .vscode/

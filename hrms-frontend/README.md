@@ -1,19 +1,19 @@
-# HRMS Lite Frontend
+# HRMS Frontend
 
-React-based frontend for the Human Resource Management System (HRMS Lite).
+React-based frontend for the Human Resource Management System (HRMS).
 
 ## Tech Stack
 
-- **Framework**: React 18
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **HTTP Client**: Axios
-- **Node**: v18+, npm v10+
+- Framework: React 18
+- Build Tool: Vite
+- Styling: Tailwind CSS
+- HTTP Client: Axios
+- Node: v18+, npm v10+
 
 ## Project Structure
 
 ```
-hrms-lite-frontend/
+hrms-frontend/
 ├── src/
 │   ├── main.jsx              # Application entry point
 │   ├── App.jsx               # Main app component
@@ -36,7 +36,7 @@ hrms-lite-frontend/
 └── README.md                # This file
 ```
 
-## Installation & Setup
+## Installation and Setup
 
 ### Prerequisites
 - Node.js v18+
@@ -44,12 +44,12 @@ hrms-lite-frontend/
 
 ### Local Development
 
-1. **Install dependencies**:
+1. Install dependencies:
    ```bash
    npm install
    ```
 
-2. **Create .env file** (copy from .env.example):
+2. Create .env file (copy from .env.example):
    ```bash
    cp .env.example .env
    ```
@@ -59,54 +59,54 @@ hrms-lite-frontend/
    VITE_API_URL=http://localhost:8000/api
    ```
 
-3. **Start development server**:
+3. Start development server:
    ```bash
    npm run dev
    ```
    
-   The application will be available at `http://localhost:3000`
+   The application will be available at http://localhost:3000
 
-4. **Build for production**:
+4. Build for production:
    ```bash
    npm run build
    ```
    
-   Output will be in the `dist/` directory
+   Output will be in the dist/ directory
 
 ## Features
 
 ### Employee Management
-- ✅ Add new employees with validation
-- ✅ View all employees in a searchable table
-- ✅ Edit employee details
-- ✅ Delete employees with confirmation
-- ✅ Search by name, ID, or email
-- ✅ Error handling and validation messages
+- Add new employees with validation
+- View all employees in a searchable table
+- Edit employee details
+- Delete employees with confirmation
+- Search by name, ID, or email
+- Error handling and validation messages
 
 ### Attendance Management
-- ✅ Select employee and mark attendance
-- ✅ View attendance records with filters
-- ✅ Filter by status (Present/Absent)
-- ✅ Sort attendance records by date
-- ✅ View attendance statistics:
+- Select employee and mark attendance
+- View attendance records with filters
+- Filter by status (Present/Absent)
+- Sort attendance records by date
+- View attendance statistics:
   - Total records
   - Days present
   - Days absent
-- ✅ Delete attendance records
+- Delete attendance records
 
 ### UI Features
-- ✅ Professional, responsive design
-- ✅ Real-time error messages
-- ✅ Success notifications
-- ✅ Loading states
-- ✅ Empty states with helpful messages
-- ✅ Mobile-friendly layout
-- ✅ Smooth animations and transitions
-- ✅ Tabbed navigation (Employees/Attendance)
+- Professional, responsive design
+- Real-time error messages
+- Success notifications
+- Loading states
+- Empty states with helpful messages
+- Mobile-friendly layout
+- Smooth animations and transitions
+- Tabbed navigation (Employees/Attendance)
 
 ## API Integration
 
-The frontend connects to the FastAPI backend via the `/api` prefix. All endpoints are defined in `src/api.js`:
+The frontend connects to the FastAPI backend via the /api prefix. All endpoints are defined in src/api.js:
 
 ```javascript
 import { employeeAPI, attendanceAPI, statsAPI } from './api'
@@ -130,14 +130,14 @@ statsAPI.getAttendanceSummary(employeeId)
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and customize:
+Copy .env.example to .env and customize:
 
 ```env
 # Backend API URL
 VITE_API_URL=http://localhost:8000/api
 ```
 
-## Build & Deployment
+## Build and Deployment
 
 ### Development Build
 ```bash
@@ -174,8 +174,8 @@ vercel
 
 1. Push code to GitHub
 2. Connect repository to Netlify
-3. Build command: `npm run build`
-4. Publish directory: `dist`
+3. Build command: npm run build
+4. Publish directory: dist
 5. Set environment variables
 6. Deploy
 

@@ -1,45 +1,45 @@
-# HRMS Lite - Human Resource Management System
+# HRMS - Human Resource Management System
 
 A lightweight, full-stack web application for managing employee records and daily attendance. Built with React, FastAPI, and SQLAlchemy.
 
-## 🚀 Live Demo
+## Live Demo
 
-- **Frontend**: [https://hrms-lite.vercel.app](https://hrms-lite.vercel.app)
-- **API Docs**: [https://hrms-lite-api.onrender.com/docs](https://hrms-lite-api.onrender.com/docs)
+- Frontend: https://hrms.vercel.app
+- API Docs: https://hrms-api.onrender.com/docs
 
-## 📋 Overview
+## Overview
 
-HRMS Lite is a production-ready HR management system designed for small to medium-sized organizations. It provides essential HR functions with a clean, intuitive interface.
+HRMS is a production-ready HR management system designed for small to medium-sized organizations. It provides essential HR functions with a clean, intuitive interface.
 
 ### Key Features
 
-✅ **Employee Management**
+Employee Management
 - Add, view, edit, and delete employee records
 - Unique employee IDs and email validation
 - Department categorization
 - Search and filter employees
 
-✅ **Attendance Tracking**
+Attendance Tracking
 - Mark daily attendance (Present/Absent)
 - View attendance history per employee
 - Filter and sort attendance records
 - Attendance statistics (total, present, absent days)
 
-✅ **Professional UI**
+Professional UI
 - Responsive design (mobile, tablet, desktop)
 - Clean, modern interface
 - Real-time validation and error feedback
 - Loading and empty states
 - Success notifications
 
-✅ **Production Ready**
+Production Ready
 - RESTful API with proper error handling
 - Database persistence (SQLite/PostgreSQL)
 - Input validation and security
 - Proper HTTP status codes
 - CORS enabled for cross-origin requests
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 18** - UI library
@@ -59,11 +59,9 @@ HRMS Lite is a production-ready HR management system designed for small to mediu
 - **SQLite** - Development
 - **PostgreSQL** - Production (recommended)
 
-## 📁 Project Structure
-
 ```
-hrms-lite/
-├── hrms-lite-backend/          # FastAPI backend
+hrms/
+├── hrms-backend/               # FastAPI backend
 │   ├── main.py                 # Application with all routes
 │   ├── models.py               # Database models
 │   ├── schemas.py              # Pydantic validation schemas
@@ -72,7 +70,7 @@ hrms-lite/
 │   ├── .env                    # Environment variables
 │   └── README.md               # Backend documentation
 │
-├── hrms-lite-frontend/         # React frontend
+├── hrms-frontend/              # React frontend
 │   ├── src/
 │   │   ├── main.jsx            # Entry point
 │   │   ├── App.jsx             # Main component
@@ -88,7 +86,7 @@ hrms-lite/
 └── README.md                   # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js v18+ and npm v10+
@@ -99,7 +97,7 @@ hrms-lite/
 
 1. **Navigate to backend directory**:
    ```bash
-   cd hrms-lite-backend
+   cd hrms-backend
    ```
 
 2. **Create virtual environment**:
@@ -118,16 +116,16 @@ hrms-lite/
    python main.py
    ```
    
-   Backend will be available at `http://localhost:8000`
+   Backend will be available at http://localhost:8000
    
-   - **Swagger UI**: `http://localhost:8000/docs`
-   - **Health Check**: `http://localhost:8000/health`
+   - Swagger UI: http://localhost:8000/docs
+   - Health Check: http://localhost:8000/health
 
 ### Frontend Setup (Local)
 
 1. **Navigate to frontend directory**:
    ```bash
-   cd hrms-lite-frontend
+   cd hrms-frontend
    ```
 
 2. **Install dependencies**:
@@ -140,40 +138,40 @@ hrms-lite/
    cp .env.example .env
    ```
    
-   Ensure `VITE_API_URL=http://localhost:8000/api`
+   Ensure VITE_API_URL=http://localhost:8000/api
 
 4. **Run development server**:
    ```bash
    npm run dev
    ```
    
-   Frontend will be available at `http://localhost:3000`
+   Frontend will be available at http://localhost:3000
 
 ### Running Both Applications
 
 Open two terminal windows:
 
-**Terminal 1 - Backend**:
+Terminal 1 - Backend:
 ```bash
-cd hrms-lite-backend
+cd hrms-backend
 source venv/bin/activate
 python main.py
 ```
 
-**Terminal 2 - Frontend**:
+Terminal 2 - Frontend:
 ```bash
-cd hrms-lite-frontend
+cd hrms-frontend
 npm run dev
 ```
 
-Visit `http://localhost:3000` to use the application.
+Visit http://localhost:3000 to use the application.
 
-## 📚 API Documentation
+## API Documentation
 
 ### Base URL
 ```
 Local: http://localhost:8000/api
-Production: https://hrms-lite-api.onrender.com/api
+Production: https://hrms-api.onrender.com/api
 ```
 
 ### Employees
@@ -211,7 +209,7 @@ GET /docs (Swagger UI)
 GET /redoc (ReDoc)
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Backend Environment Variables
 ```env
@@ -226,10 +224,10 @@ DEBUG=false
 ### Frontend Environment Variables
 ```env
 # API Endpoint
-VITE_API_URL=https://hrms-lite-api.onrender.com/api
+VITE_API_URL=https://hrms-api.onrender.com/api
 ```
 
-## 📤 Deployment
+## Deployment
 
 ### Backend Deployment (Render)
 
@@ -237,12 +235,12 @@ VITE_API_URL=https://hrms-lite-api.onrender.com/api
 2. Create new Web Service on Render
 3. Connect GitHub repository
 4. Configure:
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port 8000`
+   - Build Command: pip install -r requirements.txt
+   - Start Command: uvicorn main:app --host 0.0.0.0 --port 8000
 5. Add environment variables:
-   - `DATABASE_URL`: PostgreSQL connection string
-   - `ENVIRONMENT`: production
-   - `DEBUG`: false
+   - DATABASE_URL: PostgreSQL connection string
+   - ENVIRONMENT: production
+   - DEBUG: false
 6. Deploy
 
 ### Frontend Deployment (Vercel)
@@ -250,17 +248,17 @@ VITE_API_URL=https://hrms-lite-api.onrender.com/api
 1. Push code to GitHub
 2. Import project on Vercel
 3. Configure:
-   - **Framework**: Vite
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
+   - Framework: Vite
+   - Build Command: npm run build
+   - Output Directory: dist
 4. Add environment variable:
-   - `VITE_API_URL`: Backend API URL
+   - VITE_API_URL: Backend API URL
 5. Deploy
 
-## ✅ Testing
+## Testing
 
 ### API Testing
-Use Swagger UI at `/docs` (backend running)
+Use Swagger UI at /docs (backend running)
 
 ### Manual Testing Checklist
 - [ ] Add employee with all required fields
@@ -275,53 +273,53 @@ Use Swagger UI at `/docs` (backend running)
 - [ ] View attendance statistics
 - [ ] Test error cases (duplicates, invalid email, etc.)
 
-## 🎯 Core Functional Requirements Met
+## Core Functional Requirements Met
 
-✅ **Employee Management**
+Employee Management
 - Add employee with ID, name, email, department
 - View all employees
 - Delete employee
 - Validation and error handling
 
-✅ **Attendance Management**
+Attendance Management
 - Mark attendance with date and status
 - View attendance records per employee
 - Delete attendance records
 - Statistics tracking
 
-✅ **Backend**
+Backend
 - RESTful APIs for all operations
 - Database persistence
 - Server-side validation
 - Proper error handling
 - Meaningful HTTP status codes
 
-✅ **Frontend**
+Frontend
 - Professional, production-ready UI
 - Responsive design
 - Form validation
 - Error and success messages
 - Loading states
 
-✅ **Deployment**
+Deployment
 - Live frontend URL (Vercel)
 - Live backend API (Render)
 - Public GitHub repository
 - Comprehensive documentation
 
-## 📊 Bonus Features Implemented
+## Bonus Features Implemented
 
-✅ Attendance filtering by status
-✅ Sort attendance records by date  
-✅ Attendance statistics dashboard
-✅ Search functionality for employees
-✅ Department categorization
-✅ Professional error handling
-✅ Real-time validation feedback
-✅ Responsive mobile design
-✅ API documentation with Swagger UI
+- Attendance filtering by status
+- Sort attendance records by date  
+- Attendance statistics dashboard
+- Search functionality for employees
+- Department categorization
+- Professional error handling
+- Real-time validation feedback
+- Responsive mobile design
+- API documentation with Swagger UI
 
-## 📝 Assumptions & Limitations
+## Assumptions & Limitations
 
 ### Assumptions
 1. Single admin user (no authentication required)
@@ -339,7 +337,7 @@ Use Swagger UI at `/docs` (backend running)
 6. No backup/recovery system
 7. Single timezone (UTC)
 
-## 🔒 Security Considerations
+## Security Considerations
 
 - Email validation (RFC 5321)
 - CORS configured (customize for production)
@@ -348,38 +346,38 @@ Use Swagger UI at `/docs` (backend running)
 - No sensitive data in logs
 - Environment variables for secrets
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Backend won't start
 - Check Python version (3.8+)
-- Verify dependencies: `pip install -r requirements.txt`
+- Verify dependencies: pip install -r requirements.txt
 - Check if port 8000 is available
 - Review error messages in terminal
 
 ### Frontend can't connect to API
 - Verify backend is running on port 8000
-- Check `VITE_API_URL` in `.env`
+- Check VITE_API_URL in .env
 - Check browser console for CORS errors
 - Ensure CORS is enabled in backend
 
 ### Database errors
-- If using SQLite, ensure `hrms.db` file exists and is writable
-- If using PostgreSQL, verify connection string in `.env`
+- If using SQLite, ensure hrms.db file exists and is writable
+- If using PostgreSQL, verify connection string in .env
 - Check database permissions
 
-## 📞 Support
+## Support
 
 For issues or questions:
 1. Check the respective README files (backend/frontend)
-2. Review API documentation at `/docs` (backend)
+2. Review API documentation at /docs (backend)
 3. Check browser console for frontend errors
 4. Review server logs for backend errors
 
-## 📄 License
+## License
 
 This project is provided as-is for educational and commercial use.
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 - Full-stack web development with modern tools
@@ -392,7 +390,7 @@ This project demonstrates:
 - Deployment and DevOps basics
 - Git workflow and version control
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 Potential features for future versions:
 - User authentication and authorization
@@ -410,7 +408,5 @@ Potential features for future versions:
 - Integration with other HR tools
 
 ---
-
-**Built with ❤️ for HR teams everywhere**
 
 Last Updated: February 24, 2026
