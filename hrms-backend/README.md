@@ -116,29 +116,7 @@ All errors return meaningful HTTP status codes and messages:
 - 404 Not Found: Resource not found
 - 500 Internal Server Error: Server error
 
-## CORS Configuration
 
-CORS is enabled for all origins. Update the CORS middleware in main.py for production:
-```python
-allow_origins=["https://your-frontend-url.com"]
-```
-
-## Deployment
-
-The backend is production-ready and can be deployed to:
-- Render (recommended)
-- Railway
-- Heroku
-- AWS
-- Google Cloud Platform
-
-### Deployment Requirements
-
-1. Database: Use PostgreSQL instead of SQLite
-2. Update DATABASE_URL environment variable
-3. Set DEBUG=false
-4. Update CORS allowed origins
-5. Use a production ASGI server (Uvicorn handles this)
 
 ## Testing Endpoints
 
@@ -162,10 +140,4 @@ curl -X POST http://localhost:8000/api/attendance \
 curl http://localhost:8000/health
 ```
 
-## Notes
 
-- The backend creates tables automatically on startup
-- SQLite database file is created in the project root (hrms.db)
-- All timestamps are stored as dates (not full datetime)
-- Employee ID must be unique and cannot be changed after creation
-- Email validation is strict (RFC 5321)
