@@ -1,0 +1,23 @@
+# Backend
+hrms-lite-backend/venv/
+hrms-lite-backend/__pycache__/
+hrms-lite-backend/*.db
+hrms-lite-backend/*.sqlite3
+
+# Frontend
+hrms-lite-frontend/node_modules/
+hrms-lite-frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env.local
+.env.*.local
